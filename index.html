@@ -12,7 +12,7 @@
     
     <!-- navagacija -->
 
-    <div class="containerm-0 ">
+    <div>
 
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
@@ -26,17 +26,41 @@
     <div class="container d-flex flex-colomn justify-content-center text-center">
 
         <form class="w-50 ">
-            <div class="mb-3 mt-3 ">
+            <div class="mb-1 mt-3 ">
               <label for="task" >Task</label>
-              <input type="text" class="form-control bg-dark text-white text-center" id="task" placeholder="Task">
+              <input required type="text" class="form-control bg-dark text-white text-center" id="task" placeholder="Task">
             </div>
-            <div class="mb-3 d-flex flex-column justify-content-center text-center align-items-center">
+            <div class="mb-1 d-flex flex-column justify-content-center text-center align-items-center">
                 <label for="priority" class="form-label">Priority</label>
                 <select id="priority" class="w-50 form-select text-center bg-dark text-white " placeholder="Priority">
                   <option hidden disabled selected>Select</option>  
                   <option class="text-danger">High</option>
                   <option class="text-info">Normal</option>
                   <option class="text-success">Low</option>
+                </select>
+              </div>
+              <div class="mb-1">
+                <label for="task" >Due Date</label>
+                <input type="date" class="form-control bg-dark text-white text-center" id="date" >
+              </div>
+              <div class="mb-1 d-flex flex-column justify-content-center text-center align-items-center">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="w-50 form-select text-center bg-dark text-white ">
+                  <option hidden disabled selected>Select</option>  
+                  <option class="text-danger">Completed</option>
+                  <option class="text-info">In progress</option>
+                  <option class="text-success">New</option>
+                </select>
+              </div>
+              <div class="mb-3 d-flex flex-column justify-content-center text-center align-items-center">
+                <label for="precent" class="form-label">Precent completed</label>
+                <select id="precent" class="w-50 form-select text-center bg-dark text-white ">
+                  <option hidden disabled selected>Select</option>  
+                  <option class="text-danger">100%</option>
+                  <option class="text-info">75%</option>
+                  <option class="text-success">50%</option>
+                  <option class="text-info">25%</option>
+                  <option class="text-success">0%</option>
                 </select>
               </div>
             <button type="submit" class="btn btn-dark" id="submit">Submit</button>
@@ -46,13 +70,17 @@
 
     <!-- lentele -->
     
-    <div class="container mt-5">
+    <div class=" mt-5">
 
         <table class="table table-striped table-dark">
             <thead class="text-center">
               <tr>
                 <th scope="col">Task</th>
                 <th scope="col">Priority</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Precent completed</th>
+                <th scope="col">Modified on</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
